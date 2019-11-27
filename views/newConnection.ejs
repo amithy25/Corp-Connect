@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../assets/styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Connect</title>
+</head>
+
+<body>
+    <% include partials/header_logged.ejs %>
+    <main class="create-connection">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <form id="conform" method="POST" action="/newConnection ">
+                        <div class="form-group">
+                            <label>Connection Id</label>
+                            <input id="connectionId" class="form-control" type="text" name="connectionId"
+                                value="<%= qs.connectionId%>">
+                        </div>
+                        <div class="form-group">
+                            <label>Connection Name</label>
+                            <input id="connectionName" class="form-control" type="text" name="connectionName"
+                                value="<%= qs.connectionName%>">
+                        </div>
+                        <div class="form-group">
+                            <label>Connection Topic</label>
+                            <input id="connectionTopic" class="form-control" type="text" name="connectionTopic"
+                                value="<%= qs.connectionTopic%>">
+                        </div>
+                        <div class="form-group">
+                            <label>Connection Details</label>
+                            <input class="form-control" id="connectionDetails" class="form-control" type="text"
+                                name="connectionDetails" value="<%= qs.connectionDetails%>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="connectionDate">Date</label>
+                            <input id="connectionDate" class="form-control" type="text" name="connectionDate"
+                                value="<%= qs.connectionDate%>">
+                        </div>
+                        <div class="form-group">
+                            <label for="connectionTime">Time</label>
+                            <input id="connectionTime" class="form-control" type="text" name="connectionTime"
+                                value="<%= qs.connectionTime%>">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="connectionHost">Host</label>
+                            <input id="connectionHost" class="form-control" type="text" name="connectionHost"
+                                value="<%= qs.connectionHost %>">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="connectionLocation">Location</label>
+                            <input class="form-control" id="connectionLocation" type="text" name="connectionLocation"
+                                value="<%= qs.connectionLocation%>">
+                        </div>
+
+
+
+                        <div class="butn-group">
+                            <button class="btn btn-dark" type="submit" id="create_btn">Create
+                                Connection</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <% include partials/footer.ejs %>
+</body>
+
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../assets/styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Connect</title>
+</head>
+
+<body>
+    <% include partials/header.ejs %>
+    <div class="con"><a href="/connections">Connections</a></div>
+    <main class="connection">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="display-4"><%= event[0].connectionName %><br></h2>
+                    <section id="desc">
+                        <b>Hosted by: </b> <%= event[0].connectionHost %><br>
+                        <b>Date: </b><%= event[0].connectionDate %><br>
+                        <b>Start Time: </b><%= event[0].connectionTime %><br>
+                        <b>Location: </b><%= event[0].connectionLocation %> <br>
+                    </section>
+                    <section id="det">
+                        <br><br><%= event[0].connectionDetails %>
+                    </section>
+                </div>
+                <div class="col-lg-4">
+                    <div id="details">
+
+                        <form id="but" method="GET">
+                            <!-- <input hidden name="id" value="<%= event[0].connectionId %>"> -->
+                            <p>Are you interested in this event? <br>4 people are talking about this.</p>
+                            <a class="btn btn-success" href='/savedConnections?rsvp=Yes'>Yes</a>
+                            <a class="btn btn-danger" href='/savedConnections?rsvp=No'>No</a>
+                            <a class="btn btn-dark" href='/savedConnections?rsvp=Maybe'>May Be</a>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <% include partials/footer.ejs %>
+</body>
+
+</html>

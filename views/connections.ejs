@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../assets/styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Connect</title>
+</head>
+
+<body>
+    <% include partials/header.ejs %>
+    <div class="con"><a href="/connections">Connections</a></div>
+    <main class="connections">
+        <ul>
+            <% events.forEach(event => { %>
+            <li>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title"><%= event.connectionTopic %> </h5>
+                        <a href="/delete/<%= event.connectionId %>" class="btn btn-danger">
+                            <span class="fa fa-trash-o" style="font-size:20px; color:#FFF"></span>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><%= event.connectionName %>
+                        </p>
+                        <a href="/connection/<%= event.connectionId %>" class="btn btn-primary">
+                            See Connection
+                        </a>
+                        <a href="/edit/<%= event.connectionId %>" class=" btn btn-primary">Edit Connection</a>
+                    </div>
+                </div>
+            </li>
+            <% })%>
+        </ul>
+    </main>
+    <% include partials/footer.ejs %>
+</body>
+
+</html>

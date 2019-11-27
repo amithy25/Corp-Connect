@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../assets/styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Connect</title>
+</head>
+
+<body>
+    <% include partials/header_logged.ejs %>
+    <div class="con"><a href="/connections">Connections</a></div>
+    <main class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="display-4">Norm's Connections:</h3>
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Connections</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Going?</th>
+                                <th scope="col">Update</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(var i=0;i < userConnections.length;i++){ %>
+                            <tr>
+                                <td><%= userConnections[i].connectionName %> </td>
+                                <td><%= userConnections[i].connectionTopic %></td>
+                                <td><%= userConnections[i].rsvp %></td>
+                                <td>
+                                    <a class=" btn btn-outline-primary" type="submit"
+                                        href="/connection/<%=userConnections[i].connectionId %>" id="upd">Update</a>
+                                    <a class=" btn btn-outline-danger" type="submit"
+                                        href="/savedConnections?delete_id=<%= userConnections[i].connectionId %>&&delete_rsvp=<%= userConnections[i].rsvp %>"
+                                        id="del">Delete</a>
+                                </td>
+                            </tr>
+                            <%}%>
+                                </tbody>
+                            </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <% include partials/footer.ejs %>
+</body>
+
+</html>

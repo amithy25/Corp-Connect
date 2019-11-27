@@ -1,0 +1,135 @@
+.navbar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.nav li {
+    padding: 0 20px;
+}
+.nav li a {
+  color: #fff;
+  font-weight: bold;
+  transition: 0.25s ease-in-out 0s all;
+}
+.nav li a:hover {
+  color: skyblue;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.25s ease-in-out 0s all;
+}
+.con {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  border-top: 2px solid #999;
+  box-shadow: 0 0 10px 0 #333;
+}
+.con a {
+  font-size: 20px;
+  color: #fff;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.con a:hover {
+  text-decoration: none;
+  color: #fca601;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  box-shadow: 0 0 10px 0 #333;
+}
+.footer ul {
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+}
+.footer ul li {
+  display: inline-block;
+  padding: 10px 10px 0;
+  color: #fff;
+}
+.footer ul li a img {
+  width: 20px;
+  height: 20px;
+}
+.connections ul {
+	padding: 30px 0;
+	margin: 0;
+	list-style-type: none;
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	height: auto;
+	overflow: auto;
+}
+.connections {
+	display: inline-block;
+	width: 100%;
+}
+.connections li {
+	float: left;
+	width: calc(100% - 70%);
+	margin: 10px;
+}
+.card {
+	border: 2px solid #333;
+	box-shadow: 0 0 10px 0 #8e8e8e;
+}
+.connection {
+  padding-top: 100px;
+}
+h3.display-4 {
+	margin: 20px 0;
+}
+.table {
+  text-align: center;
+}
+
+.index{
+  padding-top: 30px;
+}
+
+.create-connection .form-group {
+	float: left;
+	width: 220px;
+	margin: 0 10px;
+}
+
+.form-group{
+  padding-top: 30px;
+}
+
+.loginbtn{
+  padding-top: 10px;
+}
+
+.create-connection form {
+	border: 1px solid #999;
+	height: auto;
+	overflow: auto;
+	padding: 20px;
+	box-shadow: 0 0 10px 1px #ccc;
+	border-radius: 5px;
+	background: #efefef;
+	margin-top: 60px;
+}
+.butn-group {
+	display: inline-block;
+	width: 100%;
+	padding: 30px 0 0 0;
+	text-align: center;
+	border-top: 2px solid #afafaf;
+  margin-top: 30px;
+  text-align: center;
+}
